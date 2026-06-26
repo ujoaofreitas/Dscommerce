@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # DSCommerce
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) 
