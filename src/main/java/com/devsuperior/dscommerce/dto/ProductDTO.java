@@ -2,13 +2,19 @@ package com.devsuperior.dscommerce.dto;
 
 import com.devsuperior.dscommerce.entities.Product;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import jakarta.validation.constraints.*;
 
 @JsonPropertyOrder({ "id", "name", "descript", "price", "imgurl" })
 public class ProductDTO {
 
     private Long id;
+    @Size(min = 3, max = 80, message = "Nome precisa ter de 3 a 80 caracteres")
+    @NotBlank(message = "Campo requerido")
     private String name;
+    @Size(min = 10, message = "A descrição precisa ter no mínimo 10 caracteres")
+    @NotBlank
     private String description;
+    @Positive(message = "O preço deve ser positivo")
     private Double price;
     private String imgUrl;
 
