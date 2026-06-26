@@ -10,7 +10,7 @@ A aplicação consiste em um sistema onde usuários podem visualizar produtos, g
 
 ### Back-end
 - **Java 25**
-- **Spring Boot 3**
+- **Spring Boot 4**
 - **Spring Data JPA**
 - **Spring Security** (OAuth2 com JWT para autenticação e autorização)
 - **Banco de dados:** H2 (Testes/Desenvolvimento) e PostgreSQL (Produção)
