@@ -1,3 +1,4 @@
+cat << 'EOF' > README.md
 # DSCommerce
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) 
@@ -25,60 +26,68 @@ A aplicação consiste em um sistema onde usuários podem visualizar produtos, g
 ---
 
 ## 📐 Modelo de Domínio (ORM)
-A estrutura do banco de dados e as relações entre as entidades (Produto, Categoria, Usuário, Pedido, Item de Pedido, Pagamento) seguem o modelo abaixo:
+A estrutura do banco de dados e as relações entre as entidades seguem o modelo da aplicação.
 
-*Caso tenha o diagrama do curso, você pode salvar a imagem na pasta do projeto e referenciá-la aqui.*
+---
 
-🚀 Como Executar o Projeto
-Pré-requisitos
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
 Antes de começar, você vai precisar ter instalado em sua máquina:
+- Java JDK (versão 17 ou superior)
+- Git
+- Uma IDE de sua preferência (IntelliJ IDEA, Eclipse, VS Code)
 
-Java JDK (versão 17 ou superior)
+### Passo a Passo
 
-Git
-
-Uma IDE de sua preferência (IntelliJ IDEA, Eclipse, VS Code)
-
-Passo a Passo
-Clonar o repositório:
-
-Bash
+1. **Clonar o repositório:**
+\`\`\`bash
 git clone https://github.com/ujoaofreitas/dscommerce.git
-Entrar na pasta do projeto:
+\`\`\`
 
-Bash
+2. **Entrar na pasta do projeto:**
+\`\`\`bash
 cd dscommerce
-Executar a aplicação:
-Você pode rodar diretamente pela sua IDE (executando a classe DscommerceApplication.java) ou via terminal utilizando o Maven Wrapper:
+\`\`\`
 
-Bash
+3. **Executar a aplicação:**
+Você pode rodar diretamente pela sua IDE (executando a classe \`DscommerceApplication.java\`) ou via terminal utilizando o Maven Wrapper:
+\`\`\`bash
 ./mvnw spring-boot:run
-Acessar a aplicação:
-Por padrão, a API estará rodando no endereço: http://localhost:8080
+\`\`\`
 
-O banco de dados H2 pode ser acessado em: http://localhost:8080/h2-console
+4. **Acessar a aplicação:**
+Por padrão, a API estará rodando no endereço: \`http://localhost:8080\`
 
-JDBC URL: jdbc:h2:mem:testdb
+O banco de dados H2 pode ser acessado em: \`http://localhost:8080/h2-console\`
+- **JDBC URL:** \`jdbc:h2:mem:testdb\`
+- **User Name:** \`sa\`
+- **Password:** *(deixe em branco)*
 
-User Name: sa
+---
 
-Password: (deixe em branco)
+## 🛣️ Endpoints Principais (API)
 
-🛣️ Endpoints Principais (API)
-Rotas Públicas
-GET /products - Retorna a listagem paginada de produtos.
-GET /products/{id} - Retorna os detalhes de um produto específico.
+### Rotas Públicas
+- \`GET /products\` - Retorna a listagem paginada de produtos.
+- \`GET /products/{id}\` - Retorna os detalhes de um produto específico.
 
-Rotas Protegidas (Requer Autenticação)
-POST /products - Cadastra um novo produto (Apenas ADMIN).
-PUT /products/{id} - Atualiza um produto existente (Apenas ADMIN).
-DELETE /products/{id} - Deleta um produto (Apenas ADMIN).
-POST /orders - Registra um novo pedido (CLIENT / ADMIN).
-GET /orders/{id} - Busca os detalhes de um pedido (CLIENT dono do pedido / ADMIN).
+### Rotas Protegidas (Requer Autenticação)
+- \`POST /products\` - Cadastra um novo produto (Apenas ADMIN).
+- \`PUT /products/{id}\` - Atualiza um produto existente (Apenas ADMIN).
+- \`DELETE /products/{id}\` - Deleta um produto (Apenas ADMIN).
+- \`POST /orders\` - Registra um novo pedido (CLIENT / ADMIN).
+- \`GET /orders/{id}\` - Busca os detalhes de um pedido (CLIENT dono do pedido / ADMIN).
 
-🧑‍💻 Autor
-Desenvolvido por João Freitas.
-Entre em contato comigo!
-[![LinkedIn](... )](https://linkedin.com/in/ujoaofreitas)
+---
 
+## 🧑‍💻 Autor
+
+Desenvolvido por **João Freitas**. Entre em contato comigo!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ujoaofreitas)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ujoaofreitas)
+
+---
 Criado durante o treinamento de Spring Boot da DevSuperior.
+EOF
