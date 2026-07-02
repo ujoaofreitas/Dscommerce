@@ -27,7 +27,7 @@ A aplicação consiste em um sistema onde usuários podem visualizar produtos, g
 ## 📐 Modelo de Domínio (ORM)
 A estrutura do banco de dados e as relações entre as entidades seguem o modelo da aplicação abaixo:
 
-![Modelo de Domínio](./src/com.devsuperior.dscommerce/assets/img.png)
+![Modelo de Domínio](./src/main/java/assets/img.png)
 
 ---
 
