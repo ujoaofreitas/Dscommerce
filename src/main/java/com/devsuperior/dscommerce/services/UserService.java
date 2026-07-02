@@ -30,7 +30,8 @@ public class UserService implements UserDetailsService {
 		if (result.size() == 0) {
 			throw new UsernameNotFoundException("Email not found");
 		}
-		
+
+
 		User user = new User();
 		user.setEmail(result.get(0).getUsername());
 		user.setPassword(result.get(0).getPassword());
